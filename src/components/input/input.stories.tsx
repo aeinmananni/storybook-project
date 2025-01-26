@@ -22,3 +22,9 @@ export const InputError = () => {
 export const InputWarning = () => {
   return <Input label="عنوان" status="warning" />;
 };
+
+//ما میتوانیم در استوری بوک عنوان استوری های خود را تغییر دهیم
+
+InputSuccess.storyName = "Input Access";
+
+//میتوانیم ترتیب نمایش استوری هارا تغییر دهیم
