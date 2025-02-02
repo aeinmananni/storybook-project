@@ -9,7 +9,13 @@ const meta: Meta<typeof Input> = {
 export default meta;
 
 export const InputDefault = () => {
-  return <Input label="عنوان" status="default" />;
+  return (
+    <Input
+      label="عنوان"
+      status="default"
+      styles={{ parentClassName: "!w-1/6" }}
+    />
+  );
 };
 
 export const InputSuccess = () => {

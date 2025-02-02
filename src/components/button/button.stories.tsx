@@ -11,7 +11,7 @@ export default meta;
 export const Primary: StoryObj<typeof Button> = {
   args: {
     onClick: () => console.log("My Button"),
-    className: "w-1/6",
+    className: "!w-1/6",
     varient: "primary",
     children: "Primary",
   },
@@ -20,12 +20,18 @@ export const Primary: StoryObj<typeof Button> = {
 export const LongPrimary: StoryObj<typeof Button> = {
   args: {
     ...Primary.args,
+    onClick: () => console.log("My Body"),
+    varient: "success",
     children: <h1>my Long Button</h1>,
   },
 };
 
 export const Success = () => {
-  return <Button varient="success">Success</Button>;
+  return (
+    <Button varient="success" className="!w-1/6">
+      Success
+    </Button>
+  );
 };
 export const Error = () => {
   return <Button varient="error">Error</Button>;
