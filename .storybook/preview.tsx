@@ -1,4 +1,3 @@
-import React from "react";
 import type { Preview } from "@storybook/react";
 import "../src/index.css";
 const preview: Preview = {
@@ -17,9 +16,9 @@ const preview: Preview = {
     //       : a.id.localeCompare(b.id, undefined, { numeric: true }),
     // },
   },
-  decorators: [
-    (story) => <div className="flex justify-center w-full">{story()}</div>,
-  ],
+  // decorators: [
+  //   (story) => <div className="flex justify-center w-full">{story()}</div>,
+  // ],
 };
 
 export default preview;
