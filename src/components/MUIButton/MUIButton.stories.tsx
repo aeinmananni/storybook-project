@@ -1,7 +1,8 @@
 import { Meta, StoryFn } from "@storybook/react";
 import { Button, ButtonProps, CssBaseline } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-
+import { action } from "@storybook/addon-actions";
+import "@storybook/addon-console";
 const theme = createTheme({
   palette: {
     primary: {
@@ -42,4 +43,20 @@ Outlined.args = {
   variant: "outlined",
   color: "secondary",
   onClick: () => console.log("Outlined"),
+};
+
+export const Clickble = Template.bind({});
+Clickble.args = {
+  variant: "contained",
+  color: "primary",
+  children: "Clicked here",
+  onClick: action("Button And Clicked !"),
+  onMouseOver: action("On Mopuse Overs !"),
+};
+export const Log = Template.bind({});
+Log.args = {
+  variant: "contained",
+  color: "secondary",
+  children: "Log ",
+  onClick: () => console.log("Log Button"),
 };
