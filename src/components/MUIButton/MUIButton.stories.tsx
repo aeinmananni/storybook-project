@@ -57,6 +57,6 @@ export const Log = Template.bind({});
 Log.args = {
   variant: "contained",
   color: "secondary",
-  children: "Log ",
-  onClick: () => console.log("Log Button"),
+  children: "Log",
+  onClick: () => console.log(import.meta.env.VITE_STORYBOOK_THEME),
 };
